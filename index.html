@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AG - demo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, viewport-fit=contain, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+
+<body>
+    <div class="content">
+        <h3>Демо отслеживания заказа</h3>
+        <div style="margin-top: 50px;">
+            <span> Заказ: </span><span style="font-weight: bold;" id="_order_id"> - </span>
+        </div>
+        <div>
+            <span> Водитель: </span><span id="_contractor"> - </span>
+        </div>
+
+        <div style="margin-top: 50px;">
+            Нажмите на соответствующую кнопку, чтобы передать статус:
+        </div>
+        <div class="button yellow" onclick="in_transit()">В пути</div>
+        <div class="button green" onclick="on_success()">Доставлено</div>
+        <div class="button red" onclick="on_incident()">Инцидент</div>
+        <script src="js/index.js"></script>
+
+        <div style="margin-top: 50px;">
+            Вы отправили статус:
+        </div>
+        <div id="_status">
+            -
+        </div>
+    </div>
+</body>
+
+</html>
