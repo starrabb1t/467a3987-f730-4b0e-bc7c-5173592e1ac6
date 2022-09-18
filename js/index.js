@@ -23,8 +23,8 @@ function showPosition(position) {
 }
 
 function in_transit() {
-    var text = `Заказ : ${order_id}%0AВодитель : ${contractor}%0AСтатус : ${"В пути"}%0AКоординаты : (${lat},${lon})%0A`;
-    _status.innerText = text;
+    var text = `Заказ : ${order_id}%0AВодитель : ${contractor}%0AСтатус : ${"В пути"}%0AКоординаты : (${lat},${lon})`;
+    _status.innerText = `Заказ : ${order_id}\nВодитель : ${contractor}\nСтатус : ${"В пути"}\nКоординаты : (${lat},${lon})`;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -37,7 +37,7 @@ function in_transit() {
 
 function on_success() {
     text = `Заказ : ${order_id}%0AВодитель : ${contractor}%0AСтатус : ${"Доставлено"}%0AКоординаты : (${lat},${lon})%0A`;
-    _status.innerText = text;
+    _status.innerText = `Заказ : ${order_id}\nВодитель : ${contractor}\nСтатус : ${"Доставлено"}\nКоординаты : (${lat},${lon})`;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -50,7 +50,7 @@ function on_success() {
 
 function on_incident() {
     text = `Заказ : ${order_id}%0AВодитель : ${contractor}%0AСтатус : ${"ИНЦИДЕНТ!"}%0AКоординаты : (${lat},${lon})%0A`;
-    _status.innerText = text;
+    _status.innerText = `Заказ : ${order_id}\nВодитель : ${contractor}\nСтатус : ${"ИНЦИДЕНТ!"}\nКоординаты : (${lat},${lon})`;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
